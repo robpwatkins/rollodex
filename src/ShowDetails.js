@@ -21,7 +21,7 @@ class ShowDetails extends React.Component {
         <button onClick={ () => this.handleClick() }>
           { this.state.isClicked ? 'Hide Details' : 'Show Details' }
         </button>
-        <PersonDetails person={this.props.person}/>
+        <PersonDetails isclicked={this.state.isClicked} person={this.props.person}/>
       </div>
     );
   }
