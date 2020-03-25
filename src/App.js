@@ -13,7 +13,7 @@ class App extends React.Component {
       return response.json();
     }).then(json => {
       this.setState({ persons: json.results });
-      console.log(this.state.persons[0]);
+      console.log(this.state.persons[0].registered.date.substring(0, 10));
     })
   }
   
