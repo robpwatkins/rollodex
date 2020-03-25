@@ -25,7 +25,7 @@ class App extends React.Component {
           return (
           <div key={i}>
             <h3>{`${person.name.first} ${person.name.last}`}</h3>
-            <img src={person.picture.thumbnail} alt=''></img>
+            <img className="thumb" src={person.picture.thumbnail} alt=''></img>
             <ShowDetails person={person}/>
           </div>
           )
