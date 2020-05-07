@@ -32,7 +32,7 @@ class PeoplePage extends React.Component {
         {this.state.users.map((person, i) => {
           return (
           <div key={i}>
-            <h3>{`${person.name.first} ${person.name.last}`}</h3>
+            <h3>{person.name}</h3>
             <img className="thumb" src={person.imgUrl} alt='' style={imgStyle}></img>
             <ShowPupDetails person={person}/>
           </div>

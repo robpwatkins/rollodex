@@ -10,8 +10,8 @@ const imgStyle = {
 
 const App = () => (
   <div className="App">
-    {/* <PeoplePage /> */}
-    <PuppyPage />
+    <PeoplePage />
+    {/* <PuppyPage /> */}
   </div>
 )
 
