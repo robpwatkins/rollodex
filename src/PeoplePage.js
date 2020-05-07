@@ -4,7 +4,8 @@ import React from 'react';
 import ShowDetails from './ShowDetails'
 
 const imgStyle = {
-  height: "200px"
+  height: "200px",
+  border: "5px solid white",
 }
 
 class PeoplePage extends React.Component {

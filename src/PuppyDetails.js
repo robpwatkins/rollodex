@@ -5,7 +5,7 @@ function PersonDetails(props) {
     <div>
       {props.isclicked ? (
         <div>
-          <h5>{props.person.breed}</h5>
+          <h5>Breed: {props.person.breed}</h5>
           <h5>{props.person.gender}</h5>
           <h5>Hometown: {props.person.hometown}</h5>
           <h5>Member since: {props.person.date_registered}</h5>
