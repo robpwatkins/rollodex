@@ -1,39 +1,18 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import ShowDetails from './ShowDetails'
+import PeoplePage from './PeoplePage';
+import PuppyPage from './PuppyPage';
 
-class App extends React.Component {
-  state = {
-    persons: []
-  }
-  
-  componentDidMount() {
-    fetch('https://randomuser.me/api?results=25').then(response => {
-      return response.json();
-    }).then(json => {
-      this.setState({ persons: json.results });
-      console.log(this.state.persons[0].registered.date.substring(0, 10));
-    })
-  }
-  
-  render() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        {this.state.persons.map((person, i) => {
-          return (
-          <div key={i}>
-            <h3>{`${person.name.first} ${person.name.last}`}</h3>
-            <img className="thumb" src={person.picture.thumbnail} alt=''></img>
-            <ShowDetails person={person}/>
-          </div>
-          )
-        })}
-      </header>
-    </div>
-  );
-  }
+const imgStyle = {
+  height: "200px"
 }
+
+const App = () => (
+  <div className="App">
+    <PeoplePage />
+    {/* <PuppyPage /> */}
+  </div>
+)
 
 export default App;
