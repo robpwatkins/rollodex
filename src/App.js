@@ -1,5 +1,4 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import PeoplePage from './PeoplePage';
 import PuppyPage from './PuppyPage';
@@ -10,8 +9,8 @@ const imgStyle = {
 
 const App = () => (
   <div className="App">
-    <PeoplePage />
-    {/* <PuppyPage /> */}
+    {/* <PeoplePage /> */}
+    <PuppyPage />
   </div>
 )
 
