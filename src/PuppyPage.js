@@ -4,7 +4,8 @@ import React from 'react';
 import ShowPupDetails from './ShowPupDetails';
 
 const imgStyle = {
-  height: "200px",
+  // height: "auto",
+  // width: '100%',
   border: "5px solid white",
 }
 
@@ -16,31 +17,31 @@ class PeoplePage extends React.Component {
   componentDidMount() {
     // const peopleUrl = 'https://randomuser.me/api?results=25';
     // const puppyUrl = 'https://gist.githubusercontent.com/robpwatkins/3fddbada918e592e3901a474b0953df9/raw/d7fb568d2bdcb69504249a6a3c80091723ebc20f/puppyAPI.json';
-    const starWarUrl = 'https://swapi.dev/api/planets' 
-    fetch(starWarUrl).then(response => {
+    // const starWarUrl = 'https://swapi.dev/api/planets' 
+    const puppyAPI = 'https://floating-lowlands-12266.herokuapp.com/pups'
+    fetch(puppyAPI).then(response => {
       return response.json();
     }).then(json => {
-      // this.setState({ users: json.results });
-      this.setState({ users: json.results });
+      console.log(json);
+      this.setState({ users: json });
       console.log(this.state.users)
-      // console.log(this.state.users[0].registered.date.substring(0, 10));
     })
   }
   
   render() {
   return (
     <div className="PeoplePage">
-      {/* <header className="PeoplePage-header">
+      <header className="PeoplePage-header">
         {this.state.users.map((person, i) => {
           return (
           <div key={i}>
             <h3>{person.name}</h3>
-            <img className="thumb" src={person.imgUrl} alt='' style={imgStyle}></img>
+            <img className="thumb" src={person.img_url} alt='' style={imgStyle}></img>
             <ShowPupDetails person={person}/>
           </div>
           )
         })}
-      </header> */}
+      </header>
     </div>
   );
   }
