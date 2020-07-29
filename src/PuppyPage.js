@@ -18,7 +18,7 @@ class PeoplePage extends React.Component {
     // const peopleUrl = 'https://randomuser.me/api?results=25';
     // const puppyUrl = 'https://gist.githubusercontent.com/robpwatkins/3fddbada918e592e3901a474b0953df9/raw/d7fb568d2bdcb69504249a6a3c80091723ebc20f/puppyAPI.json';
     // const starWarUrl = 'https://swapi.dev/api/planets' 
-    const puppyAPI = 'https://floating-lowlands-12266.herokuapp.com/pups'
+    const puppyAPI = 'https://www.puppyapi.com/app/pups'
     fetch(puppyAPI).then(response => {
       return response.json();
     }).then(json => {
